@@ -25,6 +25,7 @@ body {
     flex: 1 1 auto;
 }
 .answers {
+    margin-bottom:20px;
 }
 
 .answer {
@@ -33,6 +34,8 @@ body {
     background: radial-gradient(ellipse at center, #af1e23 0%,#910c0d 100%);
     position: relative;
     display: block;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
     text-align:center;
     height:50px;
     vertical-align:middle;
@@ -55,7 +58,30 @@ body {
     border-bottom: 25px solid transparent;
     border-right: 25px solid #9a1114;
     position:absolute;
-    top:-21px;
+    top:-25px;
     left:1px;
 }
-
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 26px solid transparent;
+    border-bottom: 26px solid transparent;
+    border-left: 26px solid #fff;
+    position:relative;
+}
+.triangle-right:after{
+    content:'';
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid #9a1114;
+    position:absolute;
+    top:-25px;
+    right:1px;
+}
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+    overflow:hidden;
+}

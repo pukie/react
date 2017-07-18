@@ -16,49 +16,46 @@ import {Grid, Row, Col} from 'react-bootstrap';
 // }
 function Team(props) {
     return (
+                <div className="team" onClick={props.onClick}>
+                    <div className="team_info">
+                        {props.value}
+                    </div>
+                    <div className="answers">
+                        <Row className="show-grid" style={{height: "50px"}}>
+                            <Col xs={6} md={6}>
+                                <div style={{display: "flex"}}>
+                                    <div className="triangle-left"></div>
+                                    <div className="answer">Pierwsze pytanie</div>
+                                    <div className="triangle-right"></div>
+                                </div>
+                            </Col>
+                            <Col xs={6} md={6}>
+                                <div style={{display: "flex"}}>
+                                    <div className="triangle-left"></div>
+                                    <div className="answer">Drugie pytanie</div>
+                                    <div className="triangle-right"></div>
+                                </div>
+                            </Col>
+                        </Row>
 
-        <div className="team" onClick={props.onClick}>
-
-            <div className="team_info">
-                {props.value}
-            </div>
-            <div className="answers">
-                <Row className="show-grid" style={{height: "50px"}}>
-                    <Col xs={6} md={6}>
-                        <div style={{display: "flex"}}>
-                            <div className="triangle-left"></div>
-                            <div className="answer">aaa</div>
-                            <div className="triangle-right"></div>
-                        </div>
-                    </Col>
-                    <Col xs={6} md={6}>
-                        <div style={{display: "flex"}}>
-                            <div className="triangle-left"></div>
-                            <div className="answer">aaa</div>
-                            <div className="triangle-right"></div>
-                        </div>
-                    </Col>
-                </Row>
-
-                <Row className="show-grid" style={{height: "50px"}}>
-                    <Col xs={6} md={6}>
-                        <div style={{display: "flex"}}>
-                            <div className="triangle-left"></div>
-                            <div className="answer">aaa</div>
-                            <div className="triangle-right"></div>
-                        </div>
-                    </Col>
-                    <Col xs={6} md={6}>
-                        <div style={{display: "flex"}}>
-                            <div className="triangle-left"></div>
-                            <div className="answer">aaa</div>
-                            <div className="triangle-right"></div>
-                        </div>
-                    </Col>
-                </Row>
-            </div>
-        </div>
-
+                        <Row className="show-grid" style={{height: "50px"}}>
+                            <Col xs={6} md={6}>
+                                <div style={{display: "flex"}}>
+                                    <div className="triangle-left"></div>
+                                    <div className="answer">Trzecie pytanie</div>
+                                    <div className="triangle-right"></div>
+                                </div>
+                            </Col>
+                            <Col xs={6} md={6}>
+                                <div style={{display: "flex"}}>
+                                    <div className="triangle-left"></div>
+                                    <div className="answer">Czwarte pytanie</div>
+                                    <div className="triangle-right"></div>
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
     )
 }
 
@@ -74,12 +71,12 @@ class Board extends React.Component {
 
         return (
             <Grid fluid={true}>
-                <Row className="show-grid" style={{height: "50vh"}}>
+                <Row className="no-gutter" style={{height: "50vh"}}>
                     <Col xs={6} md={6}> {this.renderSquare(0)}</Col>
                     <Col xs={6} md={6}> {this.renderSquare(1)}</Col>
                 </Row>
 
-                <Row className="show-grid" style={{height: "50vh"}}>
+                <Row className="no-gutter" style={{height: "50vh"}}>
                     <Col xs={6} md={6}> {this.renderSquare(2)}</Col>
                     <Col xs={6} md={6}> {this.renderSquare(3)}</Col>
                 </Row>
